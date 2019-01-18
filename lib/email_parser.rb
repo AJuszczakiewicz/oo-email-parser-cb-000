@@ -10,7 +10,7 @@ class EmailParser
 
   def parse
     if emails_csv.include?(",")
-      emails_csv.split(",").collect{|email| email = email.chomp!}
+      emails_csv.split(",").collect{|email| email = email.chomp}
     else
       emails_csv.split(" ")
       emails_csv.collect{|email| email.chomp!}
