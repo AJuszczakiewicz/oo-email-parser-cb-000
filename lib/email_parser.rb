@@ -12,8 +12,7 @@ class EmailParser
     if emails_csv.include?(",")
       emails_csv.split(",").collect{|email| email = email.strip}
     else
-      emails_csv.split(" ")
-      emails_csv.collect{|email| email.chomp!}
+      emails_csv.split(" ").collect{|email| email = email.strip}
     end
   end
 
