@@ -9,8 +9,8 @@ class EmailParser
   end
 
   def parse
-    if emails_csv.include?(", ")
-      emails_csv.split(", ")
+    if emails_csv.include?(",")
+      emails_csv.split(",")
     else
       emails_csv.split(" ")
     end
