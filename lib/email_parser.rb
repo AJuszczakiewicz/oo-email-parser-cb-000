@@ -7,4 +7,12 @@ class EmailParser
   def initialize(emails_csv)
     self.emails_csv = emails_csv
   end
+
+  def parse
+    if emails_csv.include?(", ")
+      emails_csv.split(", ")
+    else
+      emails_csv.split(" ")
+    end
+  end
 end
