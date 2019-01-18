@@ -9,11 +9,9 @@ class EmailParser
   end
 
   def parse
-    if emails_csv.include?(",")
-      emails_csv.split(",").collect{|email| email = email.strip}
-    else
-      emails_csv.split(" ").collect{|email| email = email.strip}
-    end
+      emails_csv.split(/,| /).collect{|email| email = email.strip}
+      emails_csv.split().collect{|email| email = email.strip}
+
   end
 
 end
