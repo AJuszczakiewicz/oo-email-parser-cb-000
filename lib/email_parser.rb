@@ -10,8 +10,6 @@ class EmailParser
 
   def parse
       emails_csv.split(/,| /).collect{|email| email = email.strip}
-      emails_csv.split().collect{|email| email = email.strip}
-
   end
 
 end
